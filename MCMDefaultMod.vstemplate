@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>MCMDefaultMod</Name>
+    <Description>Modified from ModdedDefaultMod to include a basic MCM setup</Description>
+    <Icon>MCMDefaultMod.ico</Icon>
+    <ProjectType>XCOM2Mod</ProjectType>
+    <SortOrder>1000</SortOrder>
+    <TemplateID>7e33593d-b5d7-40ef-96c6-cbd8c3f466e1</TemplateID>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>My XCOM2 Mod</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="ProjectTemplate.x2proj" ReplaceParameters="true">
+      <ProjectItem>ModPreview.jpg</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true">ReadMe.txt</ProjectItem>      
+      <ProjectItem ReplaceParameters="true">Config\XComEditor.ini</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Config\XComEngine.ini</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Config\XComGame.ini</ProjectItem>
+      <ProjectItem>Localization\XComGame.int</ProjectItem>
+	  <ProjectItem>Src\ModConfigMenuAPI\MCM_API_CfgHelpers.uci</ProjectItem>
+	  <ProjectItem>Src\ModConfigMenuAPI\MCM_API_Includes.uci</ProjectItem>
+	  <ProjectItem>Src\ModConfigMenuAPI\Classes\MCM_API.uc</ProjectItem>
+	  <ProjectItem>Src\ModConfigMenuAPI\Classes\MCM_API_Button.uc</ProjectItem>
+	  <ProjectItem>Src\ModConfigMenuAPI\Classes\MCM_API_Checkbox.uc</ProjectItem>
+	  <ProjectItem>Src\ModConfigMenuAPI\Classes\MCM_API_Dropdown.uc</ProjectItem>
+	  <ProjectItem>Src\ModConfigMenuAPI\Classes\MCM_API_Instance.uc</ProjectItem>
+	  <ProjectItem>Src\ModConfigMenuAPI\Classes\MCM_API_Label.uc</ProjectItem>
+	  <ProjectItem>Src\ModConfigMenuAPI\Classes\MCM_API_Setting.uc</ProjectItem>
+	  <ProjectItem>Src\ModConfigMenuAPI\Classes\MCM_API_SettingsGroup.uc</ProjectItem>
+	  <ProjectItem>Src\ModConfigMenuAPI\Classes\MCM_API_SettingsPage.uc</ProjectItem>
+	  <ProjectItem>Src\ModConfigMenuAPI\Classes\MCM_API_Slider.uc</ProjectItem>
+	  <ProjectItem>Src\ModConfigMenuAPI\Classes\MCM_API_Spinner.uc</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Src\$ModSafeName$\Classes\X2DownloadableContentInfo_$ModSafeName$.uc">X2DownloadableContentInfo_Mod.uc</ProjectItem>
+	  <ProjectItem ReplaceParameters="true" TargetFileName="Src\$ModSafeName$\Classes\$ModSafeName$_MCMConfig.uc">Mod_MCMConfig.uc</ProjectItem>
+	  <ProjectItem ReplaceParameters="true" TargetFileName="Src\$ModSafeName$\Classes\$ModSafeName$_MCMListener.uc">Mod_MCMListener.uc</ProjectItem>
+	  <ProjectItem ReplaceParameters="true" TargetFileName="Config\XCom$ModSafeName$Default.ini">XComModDefault.ini</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>XCOM2.Wizards</Assembly>
+    <FullClassName>Firaxis.VisualStudio.Wizards.XCOM2.DefaultModWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>
