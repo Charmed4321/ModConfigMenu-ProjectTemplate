@@ -1,4 +1,4 @@
-//All your config variables go here, the config here conains the default values for your mod.
+//All your config variables go here, the config here contains the default values for your mod.
 
 class $ModSafeName$_MCMConfig extends Object config($ModSafeName$Default);
 
