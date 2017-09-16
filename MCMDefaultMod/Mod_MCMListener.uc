@@ -54,6 +54,20 @@ simulated function SaveButtonClicked(MCM_API_SettingsPage Page)
     self.SaveConfig();
 }
 
+/* //these example functions can be added to other classes to get the values out
+function float GetValue()
+{
+	local float value;
+	value = `MCM_CH_GetValue(class'$ModSafeName$_MCMConfig'.default.SETTING,class'$ModSafeName$_MCMListener'.default.SETTING);
+    return value;
+}
+
+function bool GetBool()
+{
+    return `MCM_CH_GetValue(class'$ModSafeName$_MCMConfig'.default.bSETTING,class'$ModSafeName$_MCMListener'.default.bSETTING);;
+}
+*/
+
 defaultproperties
 {
     ScreenClass = none;
